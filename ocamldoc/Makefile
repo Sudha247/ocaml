@@ -22,7 +22,8 @@ include $(ROOTDIR)/Makefile.best_binaries
 OCAMLRUN ?= $(ROOTDIR)/boot/ocamlrun
 OCAMLYACC ?= $(ROOTDIR)/yacc/ocamlyacc
 
-STDLIBFLAGS = -nostdlib -I $(ROOTDIR)/stdlib
+STDLIBFLAGS = -nostdlib -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/runtime \
+				-I $(ROOTDIR)/asmrun
 OCAMLC = $(BEST_OCAMLC) $(STDLIBFLAGS)
 OCAMLOPT = $(BEST_OCAMLOPT) $(STDLIBFLAGS)
 OCAMLDEP = $(BEST_OCAMLDEP)
